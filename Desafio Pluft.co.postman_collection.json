@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "ab22a5e1-54a6-4ea2-9285-202ee2615a1d",
+		"name": "Desafio Pluft.co",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/usuarios/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Usuario Y\",\n    \"rg\": \"6666666666\",\n    \"cpf\": \"66666666666\",\n    \"email\": \"usuarioy@email.com\",\n    \"senha\": \"012345\",\n    \"telefone\": \"11922222222\",\n    \"idTipoUsuario\": 3,\n    \"idLogradouro\": 2\n}"
+						},
+						"url": "http://localhost:5000/api/usuarios/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"11\",\n    \"nome\": \"Usuario Yz\",\n    \"rg\": \"6666666666\",\n    \"cpf\": \"66666666666\",\n    \"email\": \"usuarioy@email.com\",\n    \"senha\": \"012345\",\n    \"telefone\": \"11922222222\",\n    \"idTipoUsuario\": 3,\n    \"idLogradouro\": 2\n}"
+						},
+						"url": "http://localhost:5000/api/usuarios/atualizar"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/usuarios/deletar/11"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lojistas",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/lojistas/listar"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
