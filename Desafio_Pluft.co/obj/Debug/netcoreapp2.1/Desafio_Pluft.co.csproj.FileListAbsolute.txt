@@ -26,3 +26,17 @@ C:\Users\Daniel\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.
 C:\Users\Daniel\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.RazorTargetAssemblyInfo.cache
 C:\Users\Daniel\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.dll
 C:\Users\Daniel\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.pdb
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\bin\Debug\netcoreapp2.1\Desafio_Pluft.co.deps.json
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\bin\Debug\netcoreapp2.1\Desafio_Pluft.co.runtimeconfig.json
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\bin\Debug\netcoreapp2.1\Desafio_Pluft.co.runtimeconfig.dev.json
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\bin\Debug\netcoreapp2.1\Desafio_Pluft.co.dll
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\bin\Debug\netcoreapp2.1\Desafio_Pluft.co.pdb
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.csprojAssemblyReference.cache
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.csproj.CoreCompileInputs.cache
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.RazorAssemblyInfo.cache
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.RazorAssemblyInfo.cs
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.AssemblyInfoInputs.cache
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.AssemblyInfo.cs
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.RazorTargetAssemblyInfo.cache
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.dll
+C:\Users\45867182851\Desktop\Desafio_Pluft.co\Desafio_Pluft.co\obj\Debug\netcoreapp2.1\Desafio_Pluft.co.pdb

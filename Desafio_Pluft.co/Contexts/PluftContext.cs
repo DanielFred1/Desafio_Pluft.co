@@ -31,8 +31,8 @@ namespace Desafio_Pluft.co.Domains
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS01; Initial Catalog =DESAFIO_PLUFT ; Integrated Security =True");
-                //optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS; Initial Catalog =DESAFIO_PLUFT ; User =sa ; Pwd =132");
+                //optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS01; Initial Catalog =DESAFIO_PLUFT ; Integrated Security =True");
+                optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS; Initial Catalog =DESAFIO_PLUFT ; User =sa ; Pwd =132");
             }
         }
 

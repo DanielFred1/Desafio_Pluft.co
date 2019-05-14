@@ -13,40 +13,40 @@ namespace Desafio_Pluft.co.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class LojistasController : ControllerBase
+    public class ServicosController : ControllerBase
     {
-        private ILojistaRepository LojistaRepositorio { get; set; }
+        private IServicoRepository ServicoRepositorio { get; set; }
 
-        public LojistasController()
+        public ServicosController()
         {
-            LojistaRepositorio = new LojistaRepository();
+            ServicoRepositorio = new ServicoRepository();
         }
 
         [HttpPost("cadastrar")]
-        public IActionResult Cadastrar(Lojistas lojista)
+        public IActionResult Cadastrar(Servicos servico)
         {
             try
             {
-                LojistaRepositorio.Cadastrar(lojista);
-                return Ok("Cadastro efetuado com sucesso.");
+                ServicoRepositorio.Cadastrar(servico);
+                return Ok("Serviço cadastrado com sucesso.");
             }
             catch (Exception ex)
             {
-                return BadRequest("Ocorreu um erro, não foi possível concluir cadastro.");
+                return BadRequest("Ocorreu um erro, não foi possível cadastrar serviço.");
             }
         }
 
         [HttpPut("atualizar")]
-        public IActionResult Atualizar(Lojistas lojista)
+        public IActionResult Atualizar(Servicos servico)
         {
             try
             {
-                LojistaRepositorio.Atualizar(lojista);
-                return Ok("Atualizado com sucesso.");
+                ServicoRepositorio.Atualizar(servico);
+                return Ok("Serviço atualizado com sucesso.");
             }
             catch (Exception ex)
             {
-                return BadRequest("Ocorreu um erro, não foi possível atualizar informações.");
+                return BadRequest("Ocorreu um erro, não foi possivel atualizar serviço.");
             }
         }
 
@@ -55,12 +55,12 @@ namespace Desafio_Pluft.co.Controllers
         {
             try
             {
-                LojistaRepositorio.Deletar(id);
-                return Ok("Lojista removido do sistema.");
+                ServicoRepositorio.Deletar(id);
+                return Ok("Serviço removido do sistema.");
             }
             catch (Exception ex)
             {
-                return BadRequest("Ocorreu um erro, não foi possível remover lojista do sistema.");
+                return BadRequest("Ocorreu um erro, não foi possível remover serviço do sistema.");
             }
         }
 
@@ -69,11 +69,11 @@ namespace Desafio_Pluft.co.Controllers
         {
             try
             {
-               return Ok(LojistaRepositorio.Listar());
+                return Ok(ServicoRepositorio.Listar());
             }
             catch (Exception ex)
             {
-                return BadRequest("Ocorreu um erro, não foi possível listar lojistas.");
+                return BadRequest("Ocorreu um erro, não foi possível listar serviços.");
             }
         }
     }

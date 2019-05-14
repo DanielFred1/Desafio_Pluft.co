@@ -13,40 +13,40 @@ namespace Desafio_Pluft.co.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class LojistasController : ControllerBase
+    public class ValoresController : ControllerBase
     {
-        private ILojistaRepository LojistaRepositorio { get; set; }
+        private IValorRepository ValorRepositorio { get; set; }
 
-        public LojistasController()
+        public ValoresController()
         {
-            LojistaRepositorio = new LojistaRepository();
+            ValorRepositorio = new ValorRepository();
         }
 
         [HttpPost("cadastrar")]
-        public IActionResult Cadastrar(Lojistas lojista)
+        public IActionResult Cadastrar(Valores valor)
         {
             try
             {
-                LojistaRepositorio.Cadastrar(lojista);
-                return Ok("Cadastro efetuado com sucesso.");
+                ValorRepositorio.Cadastrar(valor);
+                return Ok("Valor cadastrado com sucesso.");
             }
             catch (Exception ex)
             {
-                return BadRequest("Ocorreu um erro, não foi possível concluir cadastro.");
+                return BadRequest("Ocorreu um erro, não foi possível cadastrar valor.");
             }
         }
 
         [HttpPut("atualizar")]
-        public IActionResult Atualizar(Lojistas lojista)
+        public IActionResult Atualizar(Valores valor)
         {
             try
             {
-                LojistaRepositorio.Atualizar(lojista);
-                return Ok("Atualizado com sucesso.");
+                ValorRepositorio.Atualizar(valor);
+                return Ok("Valor atualizado com suceso.");
             }
             catch (Exception ex)
             {
-                return BadRequest("Ocorreu um erro, não foi possível atualizar informações.");
+                return BadRequest("Ocorreu um erro, não foi possivel atualizar valor.");
             }
         }
 
@@ -55,12 +55,12 @@ namespace Desafio_Pluft.co.Controllers
         {
             try
             {
-                LojistaRepositorio.Deletar(id);
-                return Ok("Lojista removido do sistema.");
+                ValorRepositorio.Deletar(id);
+                return Ok("Valor removido do sistema.");
             }
             catch (Exception ex)
             {
-                return BadRequest("Ocorreu um erro, não foi possível remover lojista do sistema.");
+                return BadRequest("Ocorreu um erro, não foi possível deletar valor.");
             }
         }
 
@@ -69,11 +69,11 @@ namespace Desafio_Pluft.co.Controllers
         {
             try
             {
-               return Ok(LojistaRepositorio.Listar());
+                return Ok(ValorRepositorio.Listar());
             }
             catch (Exception ex)
             {
-                return BadRequest("Ocorreu um erro, não foi possível listar lojistas.");
+                return BadRequest("Ocorreu um erro, não foi possivel listar valores.");
             }
         }
     }
