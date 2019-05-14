@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ab22a5e1-54a6-4ea2-9285-202ee2615a1d",
+		"_postman_id": "3dc5128f-f853-46ba-8efa-f90c5abf6665",
 		"name": "Desafio Pluft.co",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -89,6 +89,272 @@
 							"raw": ""
 						},
 						"url": "http://localhost:5000/api/lojistas/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Zeca pagodinho\",\n    \"rg\": \"6666666666\",\n    \"cpf\": \"66666666666\",\n    \"email\": \"zecapagodinho@lafrancois.com\",\n    \"senha\": \"012345\",\n    \"telefone\": \"11900000000\",\n    \"idTipoUsuario\": 2,\n    \"idInstituicao\": 1,\n    \"idLogradouro\": 2\n}"
+						},
+						"url": "http://localhost:5000/api/lojistas/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 4,\n    \"nome\": \"Zeca tagordinho\",\n    \"rg\": \"6666666666\",\n    \"cpf\": \"66666666666\",\n    \"email\": \"zecapagodinho@lafrancois.com\",\n    \"senha\": \"012345\",\n    \"telefone\": \"11900000000\",\n    \"idTipoUsuario\": 2,\n    \"idInstituicao\": 1,\n    \"idLogradouro\": 2\n}"
+						},
+						"url": "http://localhost:5000/api/lojistas/atualizar"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/lojistas/deletar/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Valores",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/valores/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"valor\": \"70,00\"\n}"
+						},
+						"url": "http://localhost:5000/api/valores/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 4,\n\t\"valor\": \"85,00\"\n}"
+						},
+						"url": "http://localhost:5000/api/valores/atualizar"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/valores/deletar/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servicos",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/servicos/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nomeServico\": \"Reserva de cadeiras\",\n    \"descricao\": \"Reserva para comemoração de aniversário\",\n    \"idValores\": 2,\n    \"idCapacidades\": 1\n}"
+						},
+						"url": "http://localhost:5000/api/servicos/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 4,\n\t\"nomeServico\": \"Queima de estoque\",\n    \"descricao\": \"Reserva para comemoração de aniversário\",\n    \"idValores\": 2,\n    \"idCapacidades\": 1\n}"
+						},
+						"url": "http://localhost:5000/api/servicos/atualizar"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/servicos/deletar/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logradouros",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/logradouros/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"rua\": \"Rua Ficticia, n 14\",\n    \"cep\": \"01234498\",\n    \"bairro\": \"Centro\",\n    \"municipio\": \"São Paulo\",\n    \"estado\": \"São Paulo\"\n}"
+						},
+						"url": "http://localhost:5000/api/logradouros/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 3,\n\t\"rua\": \"Rua Fajuta, n 14\",\n    \"cep\": \"01234498\",\n    \"bairro\": \"Centro\",\n    \"municipio\": \"São Paulo\",\n    \"estado\": \"São Paulo\"\n}"
+						},
+						"url": "http://localhost:5000/api/logradouros/atualizar"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/logradouros/deletar/3"
 					},
 					"response": []
 				}
