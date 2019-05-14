@@ -1,25 +1,25 @@
 USE DESAFIO_PLUFT;
 
---Retorna dados do usuario, o tipo de usuario do mesmo e seu endereço
+--Retorna dados do usuario, o tipo de usuario do mesmo e seu endereÃ§o
 SELECT U.NOME AS NOME_USUARIO, U.RG, U.CPF, U.EMAIL, U.SENHA, U.TELEFONE, T.NOME AS TIPO_USUARIO, L.RUA, L.CEP, L.BAIRRO, L.MUNICIPIO,
 L.ESTADO FROM USUARIOS U
 INNER JOIN TIPO_USUARIOS T ON U.ID_TIPO_USUARIO = T.ID
 INNER JOIN LOGRADOUROS L ON U.ID_LOGRADOURO = L.ID
 
---Retorna dados do lojista, o tipo de usuario do mesmo, seu endereço e as instituições atreladas ao seu cadastro
+--Retorna dados do lojista, o tipo de usuario do mesmo, seu endereÃ§o e as instituiÃ§Ãµes atreladas ao seu cadastro
 SELECT L.NOME, L.RG, L.CPF, L.EMAIL, L.SENHA, L.TELEFONE, T.NOME AS USUARIO, E.RUA, E.CEP, E.BAIRRO, E.MUNICIPIO, E.ESTADO,
 I.NOME_FANTASIA AS EMPREENDIMENTO, I.RAZAO_SOCIAL, I.CNPJ, I.TELEFONE FROM LOJISTAS L
 INNER JOIN TIPO_USUARIOS T ON L.ID_TIPO_USUARIO = T.ID
 INNER JOIN LOGRADOUROS E ON L.ID_LOGRADOURO = E.ID
 INNER JOIN INSTITUICOES I ON L.ID_INSTITUICAO = I.ID
 
---Retorna dados do endereço cadastrado no sistema, os usuarios e instituições atrelados ao endereço
+--Retorna dados do endereÃ§o cadastrado no sistema, os usuarios e instituiÃ§Ãµes atrelados ao endereÃ§o
 SELECT L.RUA, L.CEP, L.BAIRRO, L.MUNICIPIO, L.ESTADO, U.NOME AS USUARIO, U.TELEFONE, I.NOME_FANTASIA AS EMPREENDIMENTO,
 I.TELEFONE FROM LOGRADOUROS L
 INNER JOIN USUARIOS U ON L.ID = U.ID_LOGRADOURO
 INNER JOIN INSTITUICOES I ON L.ID = I.ID_LOGRADOURO
 
---Retorna dados da instituição cadastrada no sistema, Lojistas, endereço e area de atividade atrelados a mesma
+--Retorna dados da instituiÃ§Ã£o cadastrada no sistema, Lojistas, endereÃ§o e area de atividade atrelados a mesma
 SELECT I.NOME_FANTASIA AS EMPREENDIMENTO, I.RAZAO_SOCIAL, I.CNPJ, A.NOME AS AREA, I.TELEFONE,
 L.NOME AS EMPREENDEDOR, L.EMAIL, L.TELEFONE AS TELEFONE_EMPREENDEDOR, E.RUA, E.CEP, E.BAIRRO, E.MUNICIPIO,
 E.ESTADO FROM INSTITUICOES I
@@ -27,7 +27,7 @@ INNER JOIN LOJISTAS L ON I.ID = L.ID_INSTITUICAO
 INNER JOIN LOGRADOUROS E ON I.ID_LOGRADOURO = E.ID
 INNER JOIN AREAS_ATIVIDADE A ON I.ID_AREAS_ATIVIDADE = A.ID
 
---Retorna os serviços cadastrados, os dados de agendamento, valores e capacidade de serviço
+--Retorna os serviÃ§os cadastrados, os dados de agendamento, valores e capacidade de serviÃ§o
 SELECT S.NOME_SERVICO AS SERVICO, S.DESCRICAO, V.VALOR, C.DESCRICAO AS CAPACIDADE_SERVICO, C.QUANTIDADE,
 A.DATA_AGENDAMENTO AS DIA, A.HORA_AGENDAMENTO AS HORARIO  FROM SERVICOS S
 INNER JOIN AGENDAMENTOS A ON S.ID = A.ID_SERVICO
@@ -46,18 +46,18 @@ INNER JOIN SERVICOS S ON A.ID_SERVICO = S.ID
 SELECT A.NOME AS AREA_ATIVIDADE, I.NOME_FANTASIA AS EMPREENDIMENTO, I.CNPJ, I.TELEFONE FROM AREAS_ATIVIDADE A
 INNER JOIN INSTITUICOES I ON A.ID = I.ID_AREAS_ATIVIDADE
 
---Retorna os serviços e seu gerenciamento de estrutura
+--Retorna os serviÃ§os e seu gerenciamento de estrutura
 SELECT S.NOME_SERVICO AS SERVICO, S.DESCRICAO , C.DESCRICAO AS CAPACIDADE_SERVICO, C.QUANTIDADE FROM CAPACIDADES C
 INNER JOIN SERVICOS S ON C.ID = S.ID_CAPACIDADES
 
---Retorna os valores dos serviços
+--Retorna os valores dos serviÃ§os
 SELECT V.VALOR, S.NOME_SERVICO AS SERVICO, S.DESCRICAO, C.DESCRICAO AS CAPACIDADE, C.QUANTIDADE FROM VALORES V
 INNER JOIN SERVICOS S ON V.ID = S.ID_VALORES
 INNER JOIN CAPACIDADES C ON S.ID_CAPACIDADES = C.ID
 
 
 
---IMPLEMENTAÇÃO DE PROCEDURES
+--IMPLEMENTAÃ‡ÃƒO DE PROCEDURES
 
 --Busca um agendamento por id
 CREATE PROCEDURE BuscaAgendamento
@@ -97,7 +97,7 @@ INNER JOIN INSTITUICOES I ON L.ID_INSTITUICAO = I.ID
 WHERE L.ID = @ID
 GO
 
---Busca um endereço por id
+--Busca um endereÃ§o por id
 CREATE PROCEDURE BuscaEndereco
 @ID VARCHAR(8)
 AS
@@ -121,7 +121,7 @@ INNER JOIN AREAS_ATIVIDADE A ON I.ID_AREAS_ATIVIDADE = A.ID
 WHERE I.ID = @ID
 GO
 
---Busca serviços por id
+--Busca serviÃ§os por id
 CREATE PROCEDURE BuscaServico
 @ID VARCHAR(8)
 AS
@@ -133,7 +133,7 @@ INNER JOIN CAPACIDADES C ON S.ID_CAPACIDADES = C.ID
 WHERE S.ID = @ID
 GO
 
---Busca areas de atuação por id
+--Busca areas de atuaÃ§Ã£o por id
 CREATE PROCEDURE BuscaArea
 @ID VARCHAR(8)
 AS
@@ -142,7 +142,7 @@ INNER JOIN INSTITUICOES I ON A.ID = I.ID_AREAS_ATIVIDADE
 WHERE A.ID = @ID
 GO
 
---Busca capacidade de serviços por id
+--Busca capacidade de serviÃ§os por id
 CREATE PROCEDURE BuscaCapacidade
 @ID VARCHAR(8)
 AS
@@ -151,6 +151,7 @@ INNER JOIN SERVICOS S ON C.ID = S.ID_CAPACIDADES
 WHERE C.ID = @ID
 GO
 
+--Busca valor por id
 CREATE PROCEDURE BuscaValor
 @ID VARCHAR(8)
 AS
