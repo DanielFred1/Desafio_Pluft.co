@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Desafio_Pluft.co.Domains;
 using Desafio_Pluft.co.Interfaces;
 using Desafio_Pluft.co.Repositories;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Desafio_Pluft.co.Controllers
 {
@@ -22,6 +23,7 @@ namespace Desafio_Pluft.co.Controllers
             InstituicaoRepositorio = new InstituicaoRepository();
         }
 
+        [Authorize(Roles = "1, 2")]
         [HttpPost("cadastrar")]
         public IActionResult Cadastrar(Instituicoes instituicao)
         {
@@ -36,6 +38,7 @@ namespace Desafio_Pluft.co.Controllers
             }
         }
 
+        [Authorize(Roles = "1, 2")]
         [HttpPut("atualizar")]
         public IActionResult Atualizar(Instituicoes instituicao)
         {
@@ -50,6 +53,7 @@ namespace Desafio_Pluft.co.Controllers
             }
         }
 
+        [Authorize(Roles = "1, 2")]
         [HttpDelete("deletar/{id}")]
         public IActionResult Deletar(int id)
         {
@@ -64,6 +68,7 @@ namespace Desafio_Pluft.co.Controllers
             }
         }
 
+        [Authorize(Roles = "1, 2, 3")]
         [HttpGet("listar")]
         public IActionResult Listar()
         {

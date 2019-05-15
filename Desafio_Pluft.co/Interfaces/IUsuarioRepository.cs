@@ -15,5 +15,7 @@ namespace Desafio_Pluft.co.Interfaces
         void Deletar(int id);
 
         List<Usuarios> Listar();
+
+        Usuarios BuscarPorEmailESenha(string email, string senha);
     }
 }

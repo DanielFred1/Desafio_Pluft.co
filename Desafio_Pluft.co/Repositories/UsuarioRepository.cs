@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Desafio_Pluft.co.Domains;
 using Desafio_Pluft.co.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Desafio_Pluft.co.Repositories
 {
@@ -53,6 +54,14 @@ namespace Desafio_Pluft.co.Repositories
             using (PluftContext ctx = new PluftContext())
             {
                 return ctx.Usuarios.ToList();
+            }
+        }
+
+        public Usuarios BuscarPorEmailESenha(string email, string senha)
+        {
+            using (PluftContext ctx = new PluftContext())
+            {
+                return ctx.Usuarios.Include(c => c.IdTipoUsuarioNavigation).FirstOrDefault(x => x.Email == email && x.Senha == senha);
             }
         }
     }

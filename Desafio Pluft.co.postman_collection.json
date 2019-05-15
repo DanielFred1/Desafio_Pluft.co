@@ -11,6 +11,12 @@
 				{
 					"name": "Listar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiUm9sZSI6IjEiLCJleHAiOjE1NTc5NDczODksImlzcyI6IlBsdWZ0LldlYkFwaSIsImF1ZCI6IlBsdWZ0LldlYkFwaSJ9.LKe_p00NSz8CXzyURhINVnqnhop1n3hKV8PiX3cULQM"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -64,13 +70,19 @@
 				{
 					"name": "Deletar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiUm9sZSI6IjEiLCJleHAiOjE1NTc5NDczODksImlzcyI6IlBsdWZ0LldlYkFwaSIsImF1ZCI6IlBsdWZ0LldlYkFwaSJ9.LKe_p00NSz8CXzyURhINVnqnhop1n3hKV8PiX3cULQM"
+							}
+						},
 						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "http://localhost:5000/api/usuarios/deletar/11"
+						"url": "http://localhost:5000/api/usuarios/deletar/23"
 					},
 					"response": []
 				}
@@ -153,6 +165,12 @@
 				{
 					"name": "Listar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW94QGVtYWlsLmNvbSIsImp0aSI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiUm9sZSI6IjMiLCJleHAiOjE1NTc5NDA5NTQsImlzcyI6IlBsdWZ0LldlYkFwaSIsImF1ZCI6IlBsdWZ0LldlYkFwaSJ9.aHQ2p2HmxCD0vnUoA4aLqoC5XdzNorIiOpQ_UNYQHRg"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -166,6 +184,12 @@
 				{
 					"name": "Cadastrar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiUm9sZSI6IjEiLCJleHAiOjE1NTc5NDEwNjYsImlzcyI6IlBsdWZ0LldlYkFwaSIsImF1ZCI6IlBsdWZ0LldlYkFwaSJ9.LZsuS78CN0NgaNhhI4dxFq8KPxmUCyzdQ41mluqig7o"
+							}
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -206,6 +230,12 @@
 				{
 					"name": "Deletar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiUm9sZSI6IjEiLCJleHAiOjE1NTc5NDEwNjYsImlzcyI6IlBsdWZ0LldlYkFwaSIsImF1ZCI6IlBsdWZ0LldlYkFwaSJ9.LZsuS78CN0NgaNhhI4dxFq8KPxmUCyzdQ41mluqig7o"
+							}
+						},
 						"method": "DELETE",
 						"header": [],
 						"body": {
@@ -224,6 +254,12 @@
 				{
 					"name": "Listar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbmllbEBlbWFpbC5jb20iLCJqdGkiOiIyMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjMiLCJSb2xlIjoiMyIsImV4cCI6MTU1Nzk0NjQyNCwiaXNzIjoiUGx1ZnQuV2ViQXBpIiwiYXVkIjoiUGx1ZnQuV2ViQXBpIn0.TijFochDb4GsMw4AXHdNj0e9WWerNSqJxKc26B29v4A"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -639,6 +675,56 @@
 							"raw": ""
 						},
 						"url": "http://localhost:5000/api/agendamentos/deletar/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"admin@admin.com\",\n\t\"senha\": \"admin\"\n}"
+						},
+						"url": "http://localhost:5000/api/login/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cadastro",
+			"item": [
+				{
+					"name": "Cadastre-se",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"João\",\n\t\"rg\": \"8888888888\",\n\t\"cpf\": \"88888888888\",\n\t\"email\": \"joao@email.com\",\n\t\"senha\": \"joao\",\n\t\"telefone\": \"telefone\",\n\t\"idtipousuario\": 3,\n\t\"idlogradouro\": 1\n}"
+						},
+						"url": "http://localhost:5000/api/cadastro/cadastre-se"
 					},
 					"response": []
 				}
