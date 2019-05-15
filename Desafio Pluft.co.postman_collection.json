@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3dc5128f-f853-46ba-8efa-f90c5abf6665",
+		"_postman_id": "f7620c23-9b96-4b05-b2e5-806025931879",
 		"name": "Desafio Pluft.co",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -355,6 +355,290 @@
 							"raw": ""
 						},
 						"url": "http://localhost:5000/api/logradouros/deletar/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Areas de Atividade",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/areasatividade/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Entretenimento\"\n}"
+						},
+						"url": "http://localhost:5000/api/areasatividade/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 4,\n\t\"nome\": \"Padaria\"\n}"
+						},
+						"url": "http://localhost:5000/api/areasatividade/atualizar"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/areasatividade/deletar/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instituições",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/instituicoes/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nomeFantasia\": \"Brigaderia\",\n    \"razaoSocial\": \"Griezman Ltda\",\n    \"cnpj\": \"00012345678999\",\n    \"telefone\": \"1139201234 \",\n    \"idAreasAtividade\": 2,\n    \"idLogradouro\": 2\n}"
+						},
+						"url": "http://localhost:5000/api/instituicoes/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 4,\n\t\"nomeFantasia\": \"Gelateria\",\n    \"razaoSocial\": \"Griezman Ltda\",\n    \"cnpj\": \"00012345678999\",\n    \"telefone\": \"1139201234 \",\n    \"idAreasAtividade\": 2,\n    \"idLogradouro\": 2\n}"
+						},
+						"url": "http://localhost:5000/api/instituicoes/atualizar"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/instituicoes/deletar/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Capacidades",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/capacidades/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"descricao\": \"Capacidade de teste\",\n    \"quantidade\": \"10\"\n}"
+						},
+						"url": "http://localhost:5000/api/capacidades/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 4,\n    \"descricao\": \"Capacidade\",\n    \"quantidade\": \"10\" \n}"
+						},
+						"url": "http://localhost:5000/api/capacidades/atualizar"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/capacidades/deletar/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agendamentos",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/agendamentos/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dataAgendamento\": \"2019-05-19\",\n    \"horaAgendamento\": \"18:00:00\",\n    \"idUsuario\": 2,\n    \"idInsituicao\": 1,\n    \"idServico\": 1,\n    \"idStatus\": 1\n}"
+						},
+						"url": "http://localhost:5000/api/agendamentos/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 4,\n    \"dataAgendamento\": \"2019-05-26T00:00:00\",\n    \"horaAgendamento\": \"18:00:00\",\n    \"idUsuario\": 2,\n    \"idInsituicao\": 1,\n    \"idServico\": 1,\n    \"idStatus\": 1\n}"
+						},
+						"url": "http://localhost:5000/api/agendamentos/atualizar"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/agendamentos/deletar/4"
 					},
 					"response": []
 				}
